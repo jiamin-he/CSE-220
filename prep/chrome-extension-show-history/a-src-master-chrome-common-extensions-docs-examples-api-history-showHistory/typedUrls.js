@@ -89,17 +89,38 @@ function buildTypedUrlList(divName) {
   var searchReferring = function(url, visitItems) {
     for (var i = 0, ie = visitItems.length; i < ie; ++i) {
 
-      // present from and to
-      var o = {'type':visitItems[i].transition,
-        "from":visitIdUrl[visitItems[i].referringVisitId],
-        "to":url};
+      var type = visitItems[i].transition, fromURL = visitIdUrl[visitItems[i].referringVisitId],
+      toURL = url;
+
+      // represent from and to route
+      var o = {'type':type,
+        "from":fromURL,
+        "to":toURL};
       o.toString = function printItem(){
           return "From:"+this.from+"\nTo:"+this.to+"\n\n";
         }
       stringPopArray.push(o);
-      
-      nodes.push(parseURL(visitIdUrl[visitItems[i].referringVisitId]));
-      nodes.push(parseURL(url));
+
+      // add to node tree
+      if(fromURL == undefined) {
+        console.log("hi");
+        var exist = false;
+        for(var j = 0; j < nodes.length; j++) {
+          if(nodes[j].name == toURL) {
+              nodes[j].startCount++;
+              exist = true;
+              break;
+          } 
+        }
+        if(!exist) {
+          var temp = {
+          "name": toURL,
+          "children": [],
+          "startCount": 1 
+          };
+          nodes.push(temp);
+        } 
+      }
     }
     // make sure all is processed (else would be undefined, parallal operations)
     if (!--numRequestsOutstanding) {

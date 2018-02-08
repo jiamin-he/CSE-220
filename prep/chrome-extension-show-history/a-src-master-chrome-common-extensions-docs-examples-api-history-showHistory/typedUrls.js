@@ -103,7 +103,7 @@ function buildTypedUrlList(divName) {
 
       // add to node tree
       if(fromURL == undefined) {
-        console.log("hi");
+        // console.log("undefined"); //534
         var exist = false;
         for(var j = 0; j < nodes.length; j++) {
           if(nodes[j].name == toURL) {
@@ -117,6 +117,41 @@ function buildTypedUrlList(divName) {
           "name": toURL,
           "children": [],
           "startCount": 1 
+          };
+          nodes.push(temp);
+        } 
+      } else {
+        console.log("from a to b"); //356
+        var existFrom = false;
+        for(var j = 0; j < nodes.length; j++) {
+          if(nodes[j].name == fromURL) {
+              var cur = nodes[j].children;
+              var existTo = false;
+              for(var k = 0; k < cur.length; k++){
+                if(cur[k].name == toURL) {
+                  cur[k].routeCount++;
+                  existTo = true;
+                  break;
+                }
+              }
+              if(!existTo) {
+                cur.push({
+                  "name": toURL,
+                  "routeCount": 1
+                });
+              }
+              existFrom = true;
+              break;
+          } 
+        }
+        if(!existFrom) {
+          var temp = {
+          "name": fromURL,
+          "children": [{
+            "name": toURL,
+            "routeCount": 1
+          }],
+          "startCount": 0 
           };
           nodes.push(temp);
         } 

@@ -1,7 +1,5 @@
-// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
+// click the presented history links can directly
+// jump to that page in a new tab.
 // Event listner for clicks on links in a browser action popup.
 // Open the link in a new tab of the current window.
 function onAnchorClick(event) {
@@ -28,20 +26,14 @@ function buildPopupDom(divName, data) {
 
     var li = document.createElement('li');
     li.appendChild(a);
-
     ul.appendChild(li);
   }
+
 }
 
-// Search history to find up to ten links that a user has typed in,
+// Search history according to requirements,
 // and show those links in a popup.
 function buildTypedUrlList(divName) {
-  // To look for history items visited in the last week,
-  // subtract a week of microseconds from the current time.
-  // var microsecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
-  // var oneWeekAgo = (new Date).getTime() - microsecondsPerWeek;
-
-  // @Jiamin change from week to year
   var microsecondsPerWeek = 1000 * 60 * 60 * 24 * 7 * 31 * 12;
   var oneWeekAgo = (new Date).getTime() - microsecondsPerWeek;
 
@@ -49,18 +41,18 @@ function buildTypedUrlList(divName) {
   // that we expect to get.  When it reaches zero, we have all results.
   var numRequestsOutstanding = 0;
 
-  //@Jiamin, map visitId to url
+  //map visitId to url
   var visitIdUrl = {};
   var stringPopArray = [];
+  var nodes = [];
 
   chrome.history.search({
-      // 'text': '',              // Return every history item....
-      // @Jiamin, search in certain sites.
       'text': 'ucsd.edu',              // Return every history item....
       'startTime': oneWeekAgo  // that was accessed less than one week ago.
     },
     function(historyItems) {
       // For each history item, get details on all visits.
+      // get the detailed map
       for (var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
         var processVisitsWithUrl = function(url) {
@@ -71,11 +63,9 @@ function buildTypedUrlList(divName) {
           };
         };
         chrome.history.getVisits({url: url}, processVisitsWithUrl(url));
-        // @Jiamin. move it down
-        // numRequestsOutstanding++;
       }
 
-      //@Jiamin. iterate again
+      //iterate again to get corresponding "from" and "to"
       for(var i = 0; i < historyItems.length; ++i) {
         var url = historyItems[i].url;
         var outputReferring = function(url) {
@@ -87,21 +77,19 @@ function buildTypedUrlList(divName) {
         numRequestsOutstanding++;
       }
 
-      // @Jiamin. output
-      console.log("hi length:\t" + stringPopArray.length);
-      buildPopupDom(divName, stringPopArray.slice(0, 25));
+      // output
+      // buildPopupDom(divName, stringPopArray.slice(0, 25));
 
       if (!numRequestsOutstanding) {
         onAllVisitsProcessed();
       }
     });
 
-  // @Jiamin. search referring visit id
+  // search referring visit id
   var searchReferring = function(url, visitItems) {
     for (var i = 0, ie = visitItems.length; i < ie; ++i) {
 
-      if(visitIdUrl[visitItems[i].referringVisitId])
-      console.log(visitItems[i].transition + ":\t " +"From: \t"+visitIdUrl[visitItems[i].referringVisitId] + "\tTo:\t" +url);
+      // present from and to
       var o = {'type':visitItems[i].transition,
         "from":visitIdUrl[visitItems[i].referringVisitId],
         "to":url};
@@ -109,8 +97,11 @@ function buildTypedUrlList(divName) {
           return "From:"+this.from+"\nTo:"+this.to+"\n\n";
         }
       stringPopArray.push(o);
-      //console.log("h:\t" + stringPopArray.length);
+      
+      nodes.push(parseURL(visitIdUrl[visitItems[i].referringVisitId]));
+      nodes.push(parseURL(url));
     }
+    // make sure all is processed (else would be undefined, parallal operations)
     if (!--numRequestsOutstanding) {
       onAllVisitsProcessed();
     }
@@ -125,83 +116,87 @@ function buildTypedUrlList(divName) {
   // times a user visited a URL by typing the address.
   var processVisits = function(url, visitItems) {
     for (var i = 0, ie = visitItems.length; i < ie; ++i) {
-
-      // @Jiamin
-      // test transition type
-      // console.log(visitItems[i].transition + ":\t\t " +  url + ":\t\t" + visitItems[i].referringVisitId + ":\t\t" + visitItems[i].visitId + ":\t\t" + visitItems[i].id + ":\t\t" + i);
-      // if (visitItems[i].transition == 'typed') {
-      //   console.log(visitItems[i].transition + ":\t\t " +  url);
-      // }
-
-      // want to search visitId, this not works.
-      // for(var j = 0; j < ie; ++j){
-      //   if(visitItems[i].referringVisitId == visitItems[j].visitId){
-      //     console.log("referring id: " + visitItems[j].id);
-      //   }
-      // }
-
       // most of them are undefined, should not output here.
       if (!visitIdUrl[visitItems[i].visitId]) {
         visitIdUrl[visitItems[i].visitId] = "";
       }
       visitIdUrl[visitItems[i].visitId] = url;
-      // console.log("Referring: \t"+visitIdUrl[visitItems[i].referringVisitId]);
-      
-      // Ignore items unless the user typed the URL.
-      // if (visitItems[i].transition != 'typed') {
-      //   continue;
-      // }
-
-      // @Jiamin not dealing with 'typed'
-      // if (visitItems[i].transition != 'keyword_generated') {
-      //   continue;
-      // }
-
       if (!urlToCount[url]) {
         urlToCount[url] = 0;
       }
-
       urlToCount[url]++;
     }
-
-    // If this is the final outstanding call to processVisits(),
-    // then we have the final results.  Use them to build the list
-    // of URLs to show in the popup.
-    // if (!--numRequestsOutstanding) {
-    //   onAllVisitsProcessed();
-    // }
   };
 
   // This function is called when we have the final list of URls to display.
   var onAllVisitsProcessed = function() {
-    // Get the top scorring urls.
-    // urlArray = [];
-    // for (var url in urlToCount) {
-    //   urlArray.push(url);
-    // }
+    // buildPopupDom(divName, stringPopArray.slice(0, 25));
+    
+    // output to json file
+    var array = nodes;
+    window.res = array;
+    var filename = "history.json";
+    var text;
 
-    //@Jiamin. push to new array
-    urlArray = [];
-    for (var i = 0, ie = stringPopArray.length; i < ie; ++i) {
-      console.log("string: \t" + stringPopArray[i]);
-      urlArray.push(stringPopArray[i]);
+    // json format output
+    append("[");
+    for(var i=0; i<array.length;i++) {
+      text = JSON.stringify(array[i]);
+      if(i !== array.length-1) text = text+',';
+      append(text);
     }
+    append("]");
 
-    // Sort the URLs by the number of times the user typed them.
-    // @Jiamin. Do not sort
-    // urlArray.sort(function(a, b) {
-    //   return urlToCount[b] - urlToCount[a];
-    // });
+    //browser window object download
+    window.blob = new Blob([data.innerText],{type: 'application/octet-binary'});
+    window.url = URL.createObjectURL(blob);
+    var pom = document.createElement('a');
+    pom.setAttribute('href', url);
+    pom.setAttribute('download', filename);
+    pom.click();
 
-    // buildPopupDom(divName, urlArray.slice(0, 10));
-    // @Jiamin change size.
-    // buildPopupDom(divName, urlArray.slice(0, 25));
-    // @Jiamin change output.
-    console.log("hi:\t" + stringPopArray[0]);
-    buildPopupDom(divName, stringPopArray.slice(0, 25));
+    // window.close();
   };
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+var append = function(text) {
+  data.appendChild(document.createTextNode(text));
+}
+
+var download = function(format) {
+  document.getElementById('json').innerText = "preparing file...";
   buildTypedUrlList("typedUrl_div");
+  document.getElementById('json').innerText = "Done";
+}
+
+var parseURL = function(url) {
+    var parser = document.createElement('a'),
+        searchObject = {},
+        queries, split, i;
+    // Let the browser do the work
+    parser.href = url;
+    // Convert query string to object
+    queries = parser.search.replace(/^\?/, '').split('&');
+    for( i = 0; i < queries.length; i++ ) {
+        split = queries[i].split('=');
+        searchObject[split[0]] = split[1];
+    }
+    return {
+        protocol: parser.protocol,
+        host: parser.host,
+        hostname: parser.hostname,
+        port: parser.port,
+        pathname: parser.pathname,
+        search: parser.search,
+        searchObject: searchObject,
+        hash: parser.hash
+    };
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  window.data = document.getElementById('data');
+  document.getElementById('json').onclick = function(){
+    download('json');
+  };
+  console.log(parseURL("http://ucsd.edu/campus-life/index.html"));
 });

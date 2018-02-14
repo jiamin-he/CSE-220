@@ -44,7 +44,9 @@ function buildTypedUrlList(divName) {
   //map visitId to url
   var visitIdUrl = {};
   var stringPopArray = [];
+  var starterSet = [];
   var nodes = [];
+  var edges = [];
 
   chrome.history.search({
       'text': 'ucsd.edu',              // Return every history item....
@@ -101,31 +103,48 @@ function buildTypedUrlList(divName) {
         }
       stringPopArray.push(o);
 
-      // add to node tree
+      // add to starterSet && nodes/edges
+      // if is starter 
+      // else is not starter
       if(fromURL == undefined) {
         // console.log("undefined"); //534
-        var exist = false;
-        for(var j = 0; j < nodes.length; j++) {
-          if(nodes[j].name == toURL) {
-              nodes[j].startCount++;
-              exist = true;
+        var existStarterSet = false, existNodes = false;
+        for(var j = 0; j < starterSet.length; j++) {
+          if(starterSet[j].name == toURL) {
+              starterSet[j].startCount++;
+              existStarterSet = true;
               break;
           } 
         }
-        if(!exist) {
+        for(var j = 0; j < nodes.length; j++) {
+          if(nodes[j].name == toURL) {
+              nodes[j].startCount++;
+              existNodes = true;
+              break;
+          } 
+        }
+        if(!existStarterSet) {
           var temp = {
           "name": toURL,
           "children": [],
           "startCount": 1 
           };
+          starterSet.push(temp);
+        }
+        if(!existNodes) {
+          var temp = {
+          "name": toURL,
+          "startCount": 1 
+          };
           nodes.push(temp);
-        } 
+        }
+
       } else {
-        console.log("from a to b"); //356
-        var existFrom = false;
-        for(var j = 0; j < nodes.length; j++) {
-          if(nodes[j].name == fromURL) {
-              var cur = nodes[j].children;
+        // console.log("from a to b"); //356
+        var existFromStarterSet = false;
+        for(var j = 0; j < starterSet.length; j++) {
+          if(starterSet[j].name == fromURL) {
+              var cur = starterSet[j].children;
               var existTo = false;
               for(var k = 0; k < cur.length; k++){
                 if(cur[k].name == toURL) {
@@ -140,11 +159,11 @@ function buildTypedUrlList(divName) {
                   "routeCount": 1
                 });
               }
-              existFrom = true;
+              existFromStarterSet = true;
               break;
           } 
         }
-        if(!existFrom) {
+        if(!existFromStarterSet) {
           var temp = {
           "name": fromURL,
           "children": [{
@@ -153,8 +172,51 @@ function buildTypedUrlList(divName) {
           }],
           "startCount": 0 
           };
-          nodes.push(temp);
+          starterSet.push(temp);
         } 
+
+        // add to nodes
+        var existFromNodes = false, existToNodes = false;
+        for(var j = 0; j < nodes.length; j++) {
+          if(nodes[j].name == fromURL) {
+              existFromNodes = true;
+          }
+          if(nodes[j].name == toURL) {
+              existToNodes = true;
+          } 
+          if(existToNodes && existFromNodes) break;
+        }
+        if(!existFromNodes) {
+          var temp = {
+          "name": fromURL,
+          "startCount": 0 
+          };
+          nodes.push(temp);
+        }
+        if(!existToNodes) {
+          var temp = {
+          "name": toURL,
+          "startCount": 0 
+          };
+          nodes.push(temp);
+        }
+
+        // add to edges
+        var existEdges = false;
+        for(var j = 0; j < edges.length; j++) {
+          if(edges[j].from == fromURL && edges[j].to == toURL) {
+              existEdges = true;
+              edges[j].routeCount++;
+          }
+        }
+        if(!existEdges) {
+          var temp = {
+          "from": fromURL,
+          "to": toURL,
+          "routeCount": 1 
+          };
+          edges.push(temp);
+        }
       }
     }
     // make sure all is processed (else would be undefined, parallal operations)
@@ -189,7 +251,7 @@ function buildTypedUrlList(divName) {
     // buildPopupDom(divName, stringPopArray.slice(0, 25));
     
     // output to json file
-    var array = nodes;
+    var array = starterSet;
     window.res = array;
     var filename = "history.json";
     var text;
@@ -198,8 +260,33 @@ function buildTypedUrlList(divName) {
     append("[");
     for(var i=0; i<array.length;i++) {
       text = JSON.stringify(array[i]);
-      if(i !== array.length-1) text = text+',';
+      if(i !== array.length-1) text = text+',\n';
       append(text);
+      append('\n');
+    }
+    append("]");
+
+    append("\n/////////////\n");
+
+    array = nodes;
+    append("[");
+    for(var i=0; i<array.length;i++) {
+      text = JSON.stringify(array[i]);
+      if(i !== array.length-1) text = text+',\n';
+      append(text);
+      append('\n');
+    }
+    append("]");
+
+    append("\n/////////////\n");
+
+    array = edges;
+    append("[");
+    for(var i=0; i<array.length;i++) {
+      text = JSON.stringify(array[i]);
+      if(i !== array.length-1) text = text+',\n';
+      append(text);
+      append('\n');
     }
     append("]");
 

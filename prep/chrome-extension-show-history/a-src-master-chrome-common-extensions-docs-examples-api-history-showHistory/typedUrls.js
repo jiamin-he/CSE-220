@@ -251,37 +251,37 @@ function buildTypedUrlList(divName) {
     // buildPopupDom(divName, stringPopArray.slice(0, 25));
     
     // output to json file
+    // output as history starterSet (week 4 format)
     var array = starterSet;
     window.res = array;
     var filename = "history.json";
     var text;
 
     // json format output
-    append("[");
-    for(var i=0; i<array.length;i++) {
-      text = JSON.stringify(array[i]);
-      if(i !== array.length-1) text = text+',\n';
-      append(text);
-      append('\n');
-    }
-    append("]");
+    // output starterSet
+    // append("[");
+    // for(var i=0; i<array.length;i++) {
+    //   text = JSON.stringify(array[i]);
+    //   if(i !== array.length-1) text = text+',\n';
+    //   append(text);
+    //   append('\n');
+    // }
+    // append("]");
 
-    append("\n/////////////\n");
+    append("{");
 
     array = nodes;
-    append("[");
+    append("\"nodes\":[");
     for(var i=0; i<array.length;i++) {
       text = JSON.stringify(array[i]);
       if(i !== array.length-1) text = text+',\n';
       append(text);
       append('\n');
     }
-    append("]");
-
-    append("\n/////////////\n");
+    append("],");
 
     array = edges;
-    append("[");
+    append("\"edges\":[");
     for(var i=0; i<array.length;i++) {
       text = JSON.stringify(array[i]);
       if(i !== array.length-1) text = text+',\n';
@@ -289,6 +289,8 @@ function buildTypedUrlList(divName) {
       append('\n');
     }
     append("]");
+
+    append("}");
 
     //browser window object download
     window.blob = new Blob([data.innerText],{type: 'application/octet-binary'});

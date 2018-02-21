@@ -1,0 +1,498 @@
+[{
+  "name": "http://ixd.ucsd.edu/home/w18/index.php#calendar",
+  "children": [],
+  "startCount": 32
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/studio.php",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/index.php#calendar",
+    "routeCount": 8
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/index.php",
+    "routeCount": 1
+  }],
+  "startCount": 3
+}, {
+  "name": "http://ixd.ucsd.edu/home/index.php",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/index.php#calendar",
+    "routeCount": 5
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/studio.php",
+    "routeCount": 1
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/index.php",
+    "routeCount": 24
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/lab/lab7/",
+    "routeCount": 1
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/lab/lab5/",
+    "routeCount": 1
+  }],
+  "startCount": 3
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A3/",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/index.php#calendar",
+    "routeCount": 1
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/studio.php",
+    "routeCount": 1
+  }],
+  "startCount": 11
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A4/",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/index.php#calendar",
+    "routeCount": 2
+  }],
+  "startCount": 9
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A5/",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/index.php#calendar",
+    "routeCount": 5
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/studio.php",
+    "routeCount": 2
+  }],
+  "startCount": 17
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A6/",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/index.php#calendar",
+    "routeCount": 2
+  }],
+  "startCount": 5
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/index.php",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/studio.php",
+    "routeCount": 6
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/lab/lab5/",
+    "routeCount": 1
+  }, {
+    "name": "http://ixd.ucsd.edu/home/w18/assignments/A3/",
+    "routeCount": 3
+  }],
+  "startCount": 9
+}, {
+  "name": "http://ixd.ucsd.edu/",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/index.php",
+    "routeCount": 22
+  }],
+  "startCount": 32
+}, {
+  "name": "http://www.ucsd.edu/",
+  "children": [],
+  "startCount": 18
+}, {
+  "name": "https://guest-login.ucsd.edu/login.html",
+  "children": [{
+    "name": "http://www.ucsd.edu/",
+    "routeCount": 1
+  }],
+  "startCount": 0
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1619108d7df95620",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox",
+  "children": [],
+  "startCount": 98
+}, {
+  "name": "https://mail.google.com/mail/u/0/",
+  "children": [{
+    "name": "https://mail.google.com/mail/u/0/#inbox",
+    "routeCount": 2
+  }],
+  "startCount": 46
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/examples/images/a07e1p1.mp4",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://cseweb.ucsd.edu/~cafraser/",
+  "children": [{
+    "name": "http://cseweb.ucsd.edu/~cafraser/CV.pdf",
+    "routeCount": 1
+  }],
+  "startCount": 1
+}, {
+  "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1136016_1&mode=reset",
+  "children": [{
+    "name": "https://tritoned.ucsd.edu/webapps/login/?new_loc=%2Fwebapps%2Fblackboard%2Fcontent%2FlistContent.jsp%3Fcourse_id%3D_25902_1%26content_id%3D_1136016_1%26mode%3Dreset",
+    "routeCount": 2
+  }, {
+    "name": "https://tritoned.ucsd.edu/webapps/assignment/uploadAssignment?content_id=_1199406_1&course_id=_25902_1&group_id=&mode=view",
+    "routeCount": 1
+  }, {
+    "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1136017_1&mode=reset",
+    "routeCount": 1
+  }],
+  "startCount": 54
+}, {
+  "name": "https://tritoned.ucsd.edu/webapps/login/?new_loc=%2Fwebapps%2Fblackboard%2Fcontent%2FlistContent.jsp%3Fcourse_id%3D_25902_1%26content_id%3D_1136016_1%26mode%3Dreset",
+  "children": [],
+  "startCount": 13
+}, {
+  "name": "http://ucsd.edu/",
+  "children": [],
+  "startCount": 4
+}, {
+  "name": "https://a4.ucsd.edu/tritON/Authn/UserPassword#tabs-0",
+  "children": [],
+  "startCount": 35
+}, {
+  "name": "https://d.ucsd.edu/srk/students/",
+  "children": [],
+  "startCount": 4
+}, {
+  "name": "https://docs.google.com/a/eng.ucsd.edu/forms/d/e/1FAIpQLSd4Z8EuXxr2bVIm1H9C8DYFfFyVLh5MSKFCcOo7-_WpAqKLOQ/closedform",
+  "children": [],
+  "startCount": 4
+}, {
+  "name": "https://docs.google.com/a/eng.ucsd.edu/forms/d/e/1FAIpQLSdmjO_IU7B63qd1Gm_CAjtvkpnYH_MSczsgZnAqpPLGmg2kkQ/closedform",
+  "children": [],
+  "startCount": 4
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/16177f521a9c997d",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#search/kaiser",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://d.ucsd.edu/srk/",
+  "children": [],
+  "startCount": 3
+}, {
+  "name": "https://d.ucsd.edu/srk/cv/",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A5/good_wireframe_example.pdf",
+  "children": [],
+  "startCount": 3
+}, {
+  "name": "http://designlab.ucsd.edu/#design-large",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/index.php#",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/lab/lab5/",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/lab/lab5/",
+    "routeCount": 5
+  }],
+  "startCount": 0
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/lab/lab4/",
+  "children": [{
+    "name": "http://ixd.ucsd.edu/home/w18/lab/lab4/",
+    "routeCount": 3
+  }],
+  "startCount": 2
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A5/nav_skeleton_example.m4v",
+  "children": [],
+  "startCount": 6
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A5/wireframe3.jpg",
+  "children": [],
+  "startCount": 5
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A5/good_wireframe_example_2.pdf",
+  "children": [],
+  "startCount": 4
+}, {
+  "name": "https://docs.google.com/a/eng.ucsd.edu/document/d/1JOUapV4DZew39PDzeDZBMVaIbHYRri0ccbt5z2-C7H0/edit?usp=sharing_eil&ts=59854ce8",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://tesc.ucsd.edu/decaf/",
+  "children": [],
+  "startCount": 4
+}, {
+  "name": "https://l.facebook.com/l.php?u=http%3A%2F%2Ftesc.ucsd.edu%2Fdecaf&h=ATNzQogcdPG4cerWpLwMWFjQ-bX74ovJ3_tlxAfczI6X0ckzxHR0IknwZCpct5mwBgi43X2iNjPKhNyPyln0c_9hAlDWXudjv3S-pDVagO2yqNLxNwcUBcnQMc_4qJCytWusOb5u9BTHR8S19xwBXha-6RJVgrPH9TMGyjCOw_x_gGdkXIF1jyPSlvS6LJAILip4XL4xrw",
+  "children": [],
+  "startCount": 3
+}, {
+  "name": "https://roger.ucsd.edu/screens/help-item-status.html",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "https://docs.google.com/a/eng.ucsd.edu/spreadsheets/d/1UTOeRkcxtZXAHvg5MH7766hJ82RDg4ymV6E0X9ytcqQ/edit?hl=en_US&hl=en_US#gid=0",
+  "children": [],
+  "startCount": 4
+}, {
+  "name": "https://docs.google.com/a/eng.ucsd.edu/spreadsheets/d/1OD-6zI4iJQf6_tHUSO-K7nqfUhkj5Der0FOiD_mNmXs/edit?usp=sharing",
+  "children": [],
+  "startCount": 3
+}, {
+  "name": "https://docs.google.com/a/eng.ucsd.edu/spreadsheets/d/1iR2r4RRaOu7dSx9OWWH00YdLM_u_iQG4HT07kNYZ-80/edit#gid=0",
+  "children": [],
+  "startCount": 5
+}, {
+  "name": "https://docs.google.com/a/eng.ucsd.edu/spreadsheets/d/1aQgES7rf3z3xiw95UZlh5Ft6kE4WmyJePJ4PdxeYFMI/edit#gid=2",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A7/",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://students.ucsd.edu/",
+  "children": [],
+  "startCount": 10
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR",
+  "children": [{
+    "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR#tabs-0",
+    "routeCount": 19
+  }],
+  "startCount": 19
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR#tabs-0",
+  "children": [],
+  "startCount": 26
+}, {
+  "name": "https://act.ucsd.edu/webreg2/start",
+  "children": [{
+    "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR",
+    "routeCount": 11
+  }],
+  "startCount": 21
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR&p3=true#tabs-0",
+  "children": [{
+    "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR",
+    "routeCount": 2
+  }],
+  "startCount": 2
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main",
+  "children": [],
+  "startCount": 18
+}, {
+  "name": "https://a4.ucsd.edu/tritON/profile/SAML2/Redirect/SSO",
+  "children": [],
+  "startCount": 25
+}, {
+  "name": "https://tritoned.ucsd.edu/bbcswebdav/pid-1199406-dt-content-rid-15827746_1/courses/SIOC207B_WI18_A00/Mid-Term_Projects_Rev8_w_Supp.pdf",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/16168a0995709957",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/161675668e9ce591",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/161019784b154511",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://rn21.ultipro.com/HUN1007/jobboard/Custom/Skincustom/PIAssessment/referrer.asp?PI_CM=CreatePI&PI_UI=*4F2B97BC6138D6F1&PI_FN=Yikun&PI_LN=Huang&PI_EM=yih078@ucsd.edu",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1616865b516c6568",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/161686390990ca7f",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A5/wireframe2.jpg",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://ixd.ucsd.edu/home/w18/assignments/A5/wireframe1.pdf",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1136017_1&mode=reset",
+  "children": [{
+    "name": "https://tritoned.ucsd.edu/webapps/blackboard/execute/content/file?cmd=view&content_id=_1157105_1&course_id=_25902_1",
+    "routeCount": 1
+  }, {
+    "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1157099_1&mode=reset",
+    "routeCount": 1
+  }],
+  "startCount": 0
+}, {
+  "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1157099_1&mode=reset",
+  "children": [{
+    "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1136017_1&mode=reset",
+    "routeCount": 1
+  }, {
+    "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1157101_1&mode=reset",
+    "routeCount": 1
+  }],
+  "startCount": 0
+}, {
+  "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1157101_1&mode=reset",
+  "children": [{
+    "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1157099_1&mode=reset",
+    "routeCount": 1
+  }, {
+    "name": "https://tritoned.ucsd.edu/webapps/blackboard/content/listContent.jsp?course_id=_25902_1&content_id=_1157101_1&mode=reset",
+    "routeCount": 1
+  }],
+  "startCount": 0
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1615d63e2ef78b4c",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1615d7930007faf6",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1615d6cc3f7cb02f",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1615d6d89e71caf5",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1615d6cc3c8ee288",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "https://mail.google.com/mail/u/0/#search/sdge",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#starred/16134a102c66c3ae",
+  "children": [],
+  "startCount": 3
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR#tabs-1",
+  "children": [],
+  "startCount": 44
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR#tabs-2",
+  "children": [],
+  "startCount": 27
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main?p1=WI18&p2=GR&p3=true",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "https://act.ucsd.edu/myTritonlink20/display.htm",
+  "children": [],
+  "startCount": 6
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1614eb500517f54b",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#sent/1614eb519f4d872e?compose=161538afac3035d7",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "https://mail.google.com/mail/u/0/#sent?compose=161538ada2f9c63b",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox?compose=161538ada2f9c63b",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://ixd.ucsd.edu/home/w17/assignments/examples/a04example2.html",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://ixd.ucsd.edu/home/w17/assignments/examples/a04example1.html",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://mail.google.com/mail/u/0/#inbox/1615295d39cb49ab",
+  "children": [],
+  "startCount": 2
+}, {
+  "name": "https://act.ucsd.edu/studentBilling2/billing",
+  "children": [{
+    "name": "https://act.ucsd.edu/studentBilling2/billing",
+    "routeCount": 1
+  }],
+  "startCount": 1
+}, {
+  "name": "https://act.ucsd.edu/studentBilling2/billing?jlinkevent=BalancePay",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://guest-login.ucsd.edu/fs/customwebauth/login.html?switch_url=https://guest-login.ucsd.edu/login.html&ap_mac=fc:5b:39:0a:7a:50&client_mac=68:a8:6d:14:0e:12&wlan=UCSD-GUEST&redirect=sharelatex.com/",
+  "children": [{
+    "name": "https://guest-login.ucsd.edu/login.html",
+    "routeCount": 1
+  }],
+  "startCount": 1
+}, {
+  "name": "https://ssl.safaribooksonline.com/redirect?redirectpage=%2fsecurelogin&key=&sessionid=81c3f29f-8bb4-4dae-8963-5939a2034022&ref=Undefined&oref=http%3a%2f%2fproquest.safaribooksonline.com%2fhome%3fsessionid%3d&a=&HttpReferrer=http%253a%252f%252froger.ucsd.edu%252fsearch%257eS9%253f%252fXinteractive%252bdata%252bvisualization%2526searchscope%253d9%2526SORT%253dD%252fXinteractive%252&reader=html&displaygrbooks=0&action=1&targetpage=%2f9781491921296&view=book&sort=hits&order=desc&searchview=summary&page=&imagepage=&itemsPerPage=20&Template=HomeAnonList&query=CATEGORY+bizbooks&searchmode=simple&xmlid=&portal=proquest",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://proquest.safaribooksonline.com/redirect?redirectpage=%2fhome&key=&sessionid=7676e782-7b48-4dbc-8c58-139e32a3fc68&ref=Undefined&oref=https%3a%2f%2fssl.safaribooksonline.com%2fsecurelogin&a=&HttpReferrer=http%253a%252f%252froger.ucsd.edu%252fsearch%257eS9%253f%252fXinteractive%252bdata%252bvisualization%2526searchscope%253d9%2526SORT%253dD%252fXinteractive%252&xmlid=9781491921296&reader=html&displaygrbooks=0&isbn=9781491921296&action=1&query=&targetpage=%2f9781491921296&portal=proquest",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://ssl.safaribooksonline.com/redirect?redirectpage=%2fsecurelogin&key=&sessionid=110d5d0f-5b06-47e4-bfad-569f87d65d10&ref=Undefined&oref=http%3a%2f%2fproquest.safaribooksonline.com%2f9781491921296&a=&HttpReferrer=http%3a%2f%2froger.ucsd.edu%2fsearch%7eS9%3f%2fXinteractive%2bdata%2bvisualization%26searchscope%3d9%26SORT%3dD%2fXinteractive%2bdata%2bvisualization%26searchscop&xmlid=9781491921296&reader=html&displaygrbooks=0&isbn=9781491921296&action=1&query=&portal=proquest",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://roger.ucsd.edu/record=b9545395~S9",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://roger.ucsd.edu/search~S9?/Xinteractive+data+visualization&searchscope=9&SORT=D/Xinteractive+data+visualization&searchscope=9&SORT=D&SUBKEY=interactive+data+visualization/1%2C317%2C317%2CE/frameset&FF=Xinteractive+data+visualization&searchscope=9&SORT=D&1%2C1%2C",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "http://roger.ucsd.edu/search/X?SEARCH=interactive%20data%20visualization&searchscope=9#via-lpwhp",
+  "children": [],
+  "startCount": 1
+}, {
+  "name": "https://library.ucsd.edu/",
+  "children": [{
+    "name": "https://library.ucsd.edu/dc/search?utf8=%E2%9C%93&q=orely",
+    "routeCount": 1
+  }],
+  "startCount": 3
+}, {
+  "name": "https://library.ucsd.edu/dc/search?utf8=%E2%9C%93&q=orely",
+  "children": [{
+    "name": "https://library.ucsd.edu/dc/search?utf8=%E2%9C%93&q=O%E2%80%99Reilly",
+    "routeCount": 2
+  }],
+  "startCount": 1
+}, {
+  "name": "https://library.ucsd.edu/dc/search?utf8=%E2%9C%93&q=O%E2%80%99Reilly",
+  "children": [{
+    "name": "https://library.ucsd.edu/dc/search?utf8=%E2%9C%93&q=interactive+data+visualization",
+    "routeCount": 1
+  }],
+  "startCount": 0
+}, {
+  "name": "http://ispo.ucsd.edu/current-students/working-in-usa/f1-working/optional-practical-training/index.html",
+  "children": [],
+  "startCount": 3
+}, {
+  "name": "https://act.ucsd.edu/webreg2/main?p1=FA16&p2=GR#tabs-0",
+  "children": [],
+  "startCount": 53
+}]

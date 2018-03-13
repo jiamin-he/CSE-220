@@ -1,0 +1,43 @@
+name,latitude,longitude,address,color
+Battery Park City,40.715337899999994,-74.01658354,Vesey Pl & River Terrace,#80B1D3
+Bedford-Stuyvesant,40.68676793,-73.95928168,Lexington Ave & Classon Ave,#BEBADA
+Boerum Hill,40.68683208,-73.9796772,3 Ave & Schermerhorn St,#FB8072
+Brooklyn Heights,40.69239502,-73.99337909,Clinton St & Joralemon St,#FCCDE5
+Central Park,40.76590936,-73.97634151,Central Park S & 6 Ave,#FB8072
+Chelsea,40.74177603,-74.00149746,W 17 St & 8 Ave,#B3DE69
+Chinatown,40.717290000000006,-73.996375,Elizabeth St & Hester St,#FDB462
+Civic Center,40.71307916,-73.99851193,St James Pl & Oliver St,#FB8072
+Clinton Hill,40.69196035,-73.96536851,Willoughby Ave & Hall St,#B3DE69
+Columbia St,40.69165183,-73.99997859999999,Atlantic Ave & Furman St,#FDB462
+DUMBO,40.70281858,-73.98765762,Pearl St & Anchorage Pl,#FFED6F
+Downtown Brooklyn,40.69028437,-73.98707105,Gallatin Pl & Livingston St,#80B1D3
+East Village,40.720873600000004,-73.98085795,E 2 St & Avenue C,#FCCDE5
+Financial District,40.70905623,-74.01043382,Liberty St & Broadway,#FFFFB3
+Flatiron District,40.73971301,-73.99456405,W 18 St & 6 Ave,#FDB462
+Fort Greene,40.68382604,-73.97632328,Atlantic Ave & Fort Greene Pl,#FFFFB3
+Fulton Ferry,40.70037867,-73.99548059,Columbia Heights & Cranberry St,#CCEBC5
+Garment District,40.75466591,-73.99138152,W 38 St & 8 Ave,#CCEBC5
+Gramercy,40.734232,-73.986923,E 15 St & 3 Ave,#FB8072
+Greenwich Village,40.72917025,-73.99810231,LaGuardia Pl & W 3 St,#8DD3C7
+Hell's Kitchen,40.76727216,-73.99392888,W 52 St & 11 Ave,#80B1D3
+Kips Bay,40.7381765,-73.97738662,E 25 St & 1 Ave,#80B1D3
+Koreatown,40.75097711,-73.98765428,Broadway & W 36 St,#BC80BD
+Lincoln Square,40.76915505,-73.98191841,Broadway & W 60 St,#FDB462
+Lower East Side,40.72229346,-73.99147535,Stanton St & Chrystie St,#BC80BD
+Meat Packing District,40.74195138,-74.00803013,W 14 St & The High Line,#FCCDE5
+Midtown,40.761628,-73.972924,E 56 St & Madison Ave,#BEBADA
+Midtown West,40.75660359,-73.9979009,W 37 St & 10 Ave,#FFED6F
+Murray Hill,40.748238,-73.978311,E 37 St & Lexington Ave,#D9D9D9
+Navy Yard,40.69794,-73.96986848,Clinton Ave & Flushing Ave,#D9D9D9
+NoHo,40.72743423,-73.99379025,Great Jones St,#FFED6F
+Nolita,40.7218158,-73.99720307,Cleveland Pl & Spring St,#D9D9D9
+Park Slope,40.68312489,-73.97895137,Dean St & 4 Ave,#8DD3C7
+SoHo,40.72710258,-74.00297088,MacDougal St & Prince St,#CCEBC5
+Stuyvesant Town,40.73314259,-73.97573881,E 20 St & FDR Drive,#BEBADA
+Theater District,40.76064679,-73.98442659,Broadway & W 49 St,#FFFFB3
+Tribeca,40.71911552,-74.00666661,Franklin St & W Broadway,#B3DE69
+Two Bridges,40.71117416,-74.00016545,St James Pl & Pearl St,#BEBADA
+Upper East Side,40.75849116,-73.95920622,E 59 St & Sutton Pl,#8DD3C7
+Vinegar Hill,40.69839895,-73.98068914,Nassau St & Navy St,#BC80BD
+West Village,40.73172428,-74.00674436,Barrow St & Hudson St,#FFFFB3
+Williamsburg,40.70827295,-73.96834101,Kent Ave & S 11 St,#8DD3C7
